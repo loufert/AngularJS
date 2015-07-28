@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title></title>
+</head>
+<body>
+	<div ng-controller="SimpleController">
+		Name: 
+		<input type="text" ng-model="name">					 
+		<ul>
+			<li ng-repeat="cust in customers | filter:name | orderBy:'name'">{{cust.name}} - {{cust.city}}</li>	 
+		</ul>
+	</div>
+<script src="angular.min.js"></script>
+
+<script>
+	function SimpleController($scope){
+			$scope.customers = [
+				{ name: 'John Smith', city: 'Phoenix'},
+				{ name: 'John Doe', city: 'New York'},
+				{ name: 'Jane Doe', city: 'San Francisco'},
+			];
+		}
+</script>
+</body>
+</html>
+
+								<!-- I MADE EVERYTHING I COULD SIR BUT IT STILL WON'T RUN  -->
